@@ -45,7 +45,9 @@ class Quiz extends StatefulWidget {
     }
 
     if (activeScreen == 'results-screen') {
-      screenWidget = const ResultsScreen();
+      screenWidget =  ResultsScreen(
+        chosenAnswers: selectedAnswers,
+        );
     }
 
     return MaterialApp(
