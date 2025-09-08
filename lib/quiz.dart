@@ -26,8 +26,7 @@ class Quiz extends StatefulWidget {
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
     if (selectedAnswers.length == questions.length){
-      setState((){
-        selectedAnswers=[];
+      setState((){        
         activeScreen= 'results-screen';
       });
     }
