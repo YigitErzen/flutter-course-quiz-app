@@ -31,6 +31,13 @@ class Quiz extends StatefulWidget {
       });
     }
   }
+
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = [];         
+      activeScreen = 'start-screen';
+    });
+  }
   
   @override
   Widget build(context) {
@@ -46,6 +53,7 @@ class Quiz extends StatefulWidget {
     if (activeScreen == 'results-screen') {
       screenWidget =  ResultsScreen(
         chosenAnswers: selectedAnswers,
+        onRestart: restartQuiz,
         );
     }
 
